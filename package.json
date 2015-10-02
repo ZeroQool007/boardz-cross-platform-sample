@@ -11,11 +11,5 @@
   "bugs": {
     "url": "https://github.com/thinktecture/basta-herbst-2015-xplatform-sample/issues"
   },
-  "homepage": "https://github.com/thinktecture/basta-herbst-2015-xplatform-sample#readme",
-  "dependencies": {
-    "del": "^2.0.2",
-    "gulp": "^3.9.0",
-    "shelljs": "^0.5.3",
-    "nw-builder": "^2.0.2"
-  }
+  "homepage": "https://github.com/thinktecture/basta-herbst-2015-xplatform-sample#readme"
 }
