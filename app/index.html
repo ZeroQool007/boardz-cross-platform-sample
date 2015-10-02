@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html ng-app="xplatform-sample">
+<html>
 <head>
-    <title translate="appBranding.title"></title>
+    <title></title>
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
@@ -10,10 +10,6 @@
     <link rel="stylesheet" href="vendor/admin-lte/css/AdminLTE.css"/>
     <link rel="stylesheet" href="vendor/admin-lte/css/skins/skin-purple.css"/>
     <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.css"/>
-    <link rel="stylesheet" href="vendor/ng-notify/ng-notify.min.css"/>
-    <link rel="stylesheet" href="vendor/angular-loading-bar/loading-bar.css"/>
-    <link rel="stylesheet" href="vendor/leaflet-js/leaflet.css"/>
-    <link rel="stylesheet" href="assets/app.css"/>
     <link rel="icon" href="assets/favicon.ico"/>
 </head>
 <body class="hold-transition skin-purple sidebar-mini">
@@ -35,8 +31,8 @@
 
             <div class="navbar-custom-menu">
                 <ul class="nav navbar-nav">
-                    <li ng-controller="navigationController as navigation" ng-show="navigation.showBackButton">
-                        <a href ng-click="navigation.goBack()"><i class="fa fa-chevron-left"></i></a>
+                    <li>
+                        <a><i class="fa fa-chevron-left"></i></a>
                     </li>
                     <!-- Notifications: style can be found in dropdown.less -->
                     <li class="dropdown notifications-menu hide">
@@ -89,7 +85,7 @@
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
         <!-- Main content -->
-        <section class="content" ui-view="main">
+        <section class="content">
 
         </section>
         <!-- /.content -->
@@ -103,10 +99,10 @@
         <!-- Tab panes -->
         <div class="tab-content">
             <!-- Home tab content -->
-            <div class="tab-pane active" id="control-sidebar-home-tab" ng-controller="languageController as language">
-                <h3 class="control-sidebar-heading" translate="sidebar.language"></h3>
-                <button class="btn btn-default" ng-click="language.switchTo('de-DE')" type="button" translate="sidebar.languages.deDE"></button>
-                <button class="btn btn-default" ng-click="language.switchTo('en-US')" type="button" translate="sidebar.languages.enUS"></button>
+            <div class="tab-pane active" id="control-sidebar-home-tab">
+                <h3 class="control-sidebar-heading"></h3>
+                <button class="btn btn-default" type="button" translate="sidebar.languages.deDE"></button>
+                <button class="btn btn-default" type="button" translate="sidebar.languages.enUS"></button>
                 <!-- /.control-sidebar-menu -->
             </div>
         </div>
@@ -120,44 +116,8 @@
 
 <script src="cordova.js"></script>
 <script src="cordova_plugins.js"></script>
-<script src="vendor/winstore-jscompat/winstore-jscompat.js"></script>
 <script src="vendor/jquery/jquery-2.1.4.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.js"></script>
 <script src="vendor/admin-lte/js/app.js"></script>
-<script src="vendor/angular-js/angular.js"></script>
-<script src="vendor/angular-js/angular-animate.js"></script>
-<script src="vendor/angular-js/angular-sanitize.js"></script>
-<script src="vendor/angular-translate/angular-translate.js"></script>
-<script src="vendor/angular-translate/angular-translate-static-file-loader.js"></script>
-<script src="vendor/ui-router/angular-ui-router.js"></script>
-<script src="vendor/fastclick/fastclick.js"></script>
-<script src="vendor/three-js/three.js"></script>
-<script src="vendor/three-js/TrackballControls.js"></script>
-<script src="vendor/touchpolyfill/touchpolyfill.js"></script>
-<script src="vendor/ng-notify/ng-notify.min.js"></script>
-<script src="vendor/angular-loading-bar/loading-bar.js"></script>
-<script src="vendor/leaflet-js/leaflet.js"></script>
-<script src="vendor/angular-leaflet/angular-simple-logger.js"></script>
-<script src="vendor/angular-leaflet/angular-leaflet.js"></script>
-<script src="vendor/ngCordova/ng-cordova.js"></script>
-<script src="app/init.js"></script>
-<script src="app/config.js"></script>
-<script src="app/routing.js"></script>
-<script src="app/dashboard/dashboard.js"></script>
-<script src="app/gameDetail/gameDetail.js"></script>
-<script src="app/gameList/gameList.js"></script>
-<script src="app/gamePackshot/gamePackshot.js"></script>
-<script src="app/login/login.js"></script>
-<script src="app/radiusSearch/radiusSearch.js"></script>
-<script src="app/common/controllers/language.js"></script>
-<script src="app/common/controllers/navigation.js"></script>
-<script src="app/common/interceptors/tokenInterceptor.js"></script>
-<script src="app/common/services/boardGamesApi.js"></script>
-<script src="app/common/services/geolocation.js"></script>
-<script src="app/common/services/playersApi.js"></script>
-<script src="app/common/services/storage.js"></script>
-<script src="app/common/services/security.js"></script>
-<script src="app/common/services/platformInformation.js"></script>
-<script src="app/common/services/camera.js"></script>
 </body>
 </html>
