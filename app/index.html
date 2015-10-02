@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="xplatform">
 <head>
     <title></title>
 
@@ -18,9 +18,9 @@
         <!-- Logo -->
         <a ui-sref="dashboard" class="logo">
             <!-- mini logo for sidebar mini 50x50 pixels -->
-            <span class="logo-mini" translate="appBranding.shortTitle"></span>
+            <span class="logo-mini">B!</span>
             <!-- logo for regular state and mobile devices -->
-            <span class="logo-lg" translate="appBranding.title"></span>
+            <span class="logo-lg" >BoardZ!</span>
         </a>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top" role="navigation">
@@ -69,13 +69,13 @@
             <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu">
                 <li ui-sref-active="active">
-                    <a ui-sref="dashboard"><i class="fa fa-dashboard"></i> <span translate="dashboard.title"></span></a>
+                    <a ui-sref="dashboard"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a>
                 </li>
                 <li ui-sref-active="active">
-                    <a ui-sref="games"><i class="fa fa-list"></i> <span translate="gameList.title"></span></a>
+                    <a ui-sref="gamesList"><i class="fa fa-list"></i> <span>Spieleliste</span></a>
                 </li>
                 <li ui-sref-active="active">
-                    <a ui-sref="radiusSearch"><i class="fa fa-location-arrow"></i> <span translate="radiusSearch.title"></span></a>
+                    <a ui-sref="login"><i class="fa fa-location-arrow"></i> <span>Login</span></a>
                 </li>
             </ul>
         </section>
@@ -85,7 +85,7 @@
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
         <!-- Main content -->
-        <section class="content">
+        <section class="content" ui-view>
 
         </section>
         <!-- /.content -->
@@ -114,10 +114,24 @@
 </div>
 <!-- ./wrapper -->
 
+<!-- 3rd Party -->
 <script src="cordova.js"></script>
 <script src="cordova_plugins.js"></script>
 <script src="vendor/jquery/jquery-2.1.4.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.js"></script>
 <script src="vendor/admin-lte/js/app.js"></script>
+<script src="vendor/angular-js/angular.js"></script>
+<script src="vendor/ui-router/ui-router.js"></script>
+
+<!-- xplatform Anwendung -->
+<script src="app/init.js"></script>
+<script src="app/routing.js"></script>
+
+<script src="app/config.js"></script>
+<script src="app/common/interceptors/tokenInterceptor.js"></script>
+<script src="app/common/services/security.js"></script>
+
+<script src="app/login/login.js"></script>
+<script src="app/gamesList/gamesList.js"></script>
 </body>
 </html>
