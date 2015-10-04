@@ -8,12 +8,9 @@
         'ngNotify',
         'angular-loading-bar',
         'leaflet-directive',
-        'ngCordova',
         'ngAnimate'
     ]);
 
     // insert the base URL here
     app.module.constant('apiBaseUrl', 'https://boardzapi.azurewebsites.net/');
-
-    FastClick.attach(document.body);
 }();

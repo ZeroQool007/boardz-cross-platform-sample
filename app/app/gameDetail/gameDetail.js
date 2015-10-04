@@ -12,11 +12,9 @@
      * @param {BoardGamesApi} boardGamesApi
      * @param {PlayersApi} playersApi
      * @param ngNotify
-     * @param {Geolocation} geolocation
-     * @param {Camera} camera
      * @param {Security} security
      */
-    function GameDetailController($scope, $state, $stateParams, $translate, boardGamesApi, playersApi, ngNotify, geolocation, camera, security) {
+    function GameDetailController($scope, $state, $stateParams, $translate, boardGamesApi, playersApi, ngNotify, security) {
         initialize();
 
         $scope.game = {};
@@ -36,25 +34,10 @@
             }
 
             $scope.locationError = false;
-            geolocation.getCoordinatesFromSensor()
-                .then(function (coordinates) {
-                    $scope.center = {
-                        lat: coordinates.latitude,
-                        lng: coordinates.longitude,
-                        zoom: 16
-                    };
 
-                    $scope.markers = {
-                        centerMarker: {
-                            lat: coordinates.latitude,
-                            lng: coordinates.longitude,
-                            focus: true,
-                            draggable: false
-                        }
-                    }
-                }, function () {
-                    $scope.locationError = true;
-                });
+            /*
+            geo...
+            */
         }
 
         $scope.save = function () {
@@ -90,12 +73,9 @@
         $scope.takePhoto = function () {
             $scope.photoError = false;
 
-            camera.takePhoto()
-                .then(function (photo) {
-                    $scope.photoUrl = photo;
-                }, function () {
-                    $scope.photoError = true;
-                });
+            /*
+            camera...
+            */
         };
 
         $scope.sendIAmGaming = function () {

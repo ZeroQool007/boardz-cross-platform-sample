@@ -6,11 +6,8 @@
      * @public
      *
      * @param $window
-     * @param {PlatformInformation} platformInformation
      */
-    function NavigationController($window, platformInformation) {
-        this.showBackButton = !platformInformation.isWeb();
-
+    function NavigationController($window) {
         this.goBack = function () {
             $window.history.back();
         };
