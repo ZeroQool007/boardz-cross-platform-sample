@@ -11,10 +11,11 @@
      * @param $translate
      * @param {BoardGamesApi} boardGamesApi
      * @param {PlayersApi} playersApi
+     * @param {Camera} camera
      * @param ngNotify
      * @param {Security} security
      */
-    function GameDetailController($scope, $state, $stateParams, $translate, boardGamesApi, playersApi, ngNotify, security) {
+    function GameDetailController(camera, $scope, $state, $stateParams, $translate, boardGamesApi, playersApi, ngNotify, security) {
         initialize();
 
         $scope.game = {};
@@ -73,9 +74,11 @@
         $scope.takePhoto = function () {
             $scope.photoError = false;
 
-            /*
-            camera...
-            */
+
+            camera.takePhoto().then(function(result) {
+                $scope.photoUrl = result;
+            });
+
         };
 
         $scope.sendIAmGaming = function () {

@@ -8,7 +8,8 @@
         'ngNotify',
         'angular-loading-bar',
         'leaflet-directive',
-        'ngAnimate'
+        'ngAnimate',
+        'ngCordova'
     ]);
 
     // insert the base URL here
