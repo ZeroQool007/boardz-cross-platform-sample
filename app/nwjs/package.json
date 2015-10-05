@@ -1,0 +1,14 @@
+
+{
+  "name": "BoardZZZ",
+  "version": "1.0.0",
+  "main": "www/index.html",
+  "window": {
+    "title": "BoardZZZ",
+    "toolbar": false,
+    "resizable": true,
+    "fullscreen": false,
+    "width": 800,
+    "height": 600
+  }
+}
